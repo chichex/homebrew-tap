@@ -5,21 +5,21 @@
 class Cvm < Formula
   desc "Claude Version Manager - profile manager for Claude Code"
   homepage "https://github.com/chichex/cvm"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chichex/cvm/releases/download/v0.1.0/cvm_0.1.0_darwin_amd64.tar.gz"
-      sha256 "6521a5a80f0da399e4778ad30306a758ee5053de2202f99bafcff87e1f74cd7a"
+      url "https://github.com/chichex/cvm/releases/download/v0.2.0/cvm_0.2.0_darwin_amd64.tar.gz"
+      sha256 "fe634f22cfbfd98c7c9294de5fef6e178432023ac09eb096c292e74a356ecb2a"
 
       define_method(:install) do
         bin.install "cvm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chichex/cvm/releases/download/v0.1.0/cvm_0.1.0_darwin_arm64.tar.gz"
-      sha256 "1940957e1bf060e8c5d482bf4af478b4f359ee329b48596362c84d43570cdd3e"
+      url "https://github.com/chichex/cvm/releases/download/v0.2.0/cvm_0.2.0_darwin_arm64.tar.gz"
+      sha256 "a1c135458036adb932a317526511e930f1666d0038bffd88ee47a772891be471"
 
       define_method(:install) do
         bin.install "cvm"
@@ -29,15 +29,15 @@ class Cvm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chichex/cvm/releases/download/v0.1.0/cvm_0.1.0_linux_amd64.tar.gz"
-      sha256 "19e5c0137a136c7bfb4d5a35314d57781d13e91c517a718ff07c1cc0e2e87d60"
+      url "https://github.com/chichex/cvm/releases/download/v0.2.0/cvm_0.2.0_linux_amd64.tar.gz"
+      sha256 "43d08b577c1f3e768bcc819179abd8c142dc7cbf5ee986c759833f97431bb3b8"
       define_method(:install) do
         bin.install "cvm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chichex/cvm/releases/download/v0.1.0/cvm_0.1.0_linux_arm64.tar.gz"
-      sha256 "e3a4432f8cf80b31dd5035cab794ef35eba5c1f84c871d3a805ed59aaedfc86b"
+      url "https://github.com/chichex/cvm/releases/download/v0.2.0/cvm_0.2.0_linux_arm64.tar.gz"
+      sha256 "4fcd931e72e4a7436d160e0add1262d7efc71880a91e0226575ae982bf114a43"
       define_method(:install) do
         bin.install "cvm"
       end
