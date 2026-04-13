@@ -5,21 +5,21 @@
 class Cvm < Formula
   desc "Claude Version Manager - profile manager for Claude Code"
   homepage "https://github.com/chichex/cvm"
-  version "0.11.0"
+  version "0.12.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/chichex/cvm/releases/download/v0.11.0/cvm_0.11.0_darwin_amd64.tar.gz"
-      sha256 "c14e1182661b3a2bac2384801b7b28ca91def44b9ff3ffffb89f07fbfd04833a"
+      url "https://github.com/chichex/cvm/releases/download/v0.12.0/cvm_0.12.0_darwin_amd64.tar.gz"
+      sha256 "68c107538f0a71045839b8b86a7ad676287a0f75d9be81a9849464af10b216c1"
 
       define_method(:install) do
         bin.install "cvm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/chichex/cvm/releases/download/v0.11.0/cvm_0.11.0_darwin_arm64.tar.gz"
-      sha256 "a36747e1c2c4ea70608898a5c32fff3093f75ffbc3b6ed56fd6f98bcbbe52dab"
+      url "https://github.com/chichex/cvm/releases/download/v0.12.0/cvm_0.12.0_darwin_arm64.tar.gz"
+      sha256 "8f9a77a8cf775c79e9bc96b879aeabf197cb596705f6768650b26ecb5584bf1b"
 
       define_method(:install) do
         bin.install "cvm"
@@ -29,15 +29,15 @@ class Cvm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chichex/cvm/releases/download/v0.11.0/cvm_0.11.0_linux_amd64.tar.gz"
-      sha256 "f1ef11583006d839f20a4487b49a787e8c4e012894ef850d351c8d6377a4694b"
+      url "https://github.com/chichex/cvm/releases/download/v0.12.0/cvm_0.12.0_linux_amd64.tar.gz"
+      sha256 "bdf5808ab7da895148be3fd8d03297acad2aa7b40005dc39b0145c25a89d056a"
       define_method(:install) do
         bin.install "cvm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/chichex/cvm/releases/download/v0.11.0/cvm_0.11.0_linux_arm64.tar.gz"
-      sha256 "3be92cef4a4a097c7581f0c23e334398e69642d6a22cbed04b310b01941cb044"
+      url "https://github.com/chichex/cvm/releases/download/v0.12.0/cvm_0.12.0_linux_arm64.tar.gz"
+      sha256 "7fd7cd9faa7c8b3dc120acbff0ef14ac532a68f36318157541aa0ef0525bb2b9"
       define_method(:install) do
         bin.install "cvm"
       end
